@@ -8,7 +8,7 @@ router.get("/", function(req,res,next) {
 
 router.post("/", function(req,res,next) {	
 	const MongoClient = require('mongodb').MongoClient;
-	const uri = "mongodb+srv://dbUser:randomDbUserPassword@testcluster.wkyap.mongodb.net/accounts?retryWrites=true&w=majority";
+	const uri = "URI_VASE_BAZE";
 	const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 	client.connect(err => {
