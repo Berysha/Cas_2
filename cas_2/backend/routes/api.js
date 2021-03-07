@@ -20,10 +20,10 @@ router.post("/", function(req,res,next) {
 
 		const p = collection.insertOne(personDocument);
 		
-		collection.find({}).toArray(function(err, result) {
+		collection.find({}).toArray(function(err, result) { //Ovaj blok koda jednostavno pošalje JSON file, sa svim dokumetima u kolekciji u bazi podataka. 
 			if (err) throw err;
 			console.log(result);
-			res.status(200).json({'accountsInformation' : result});
+			res.status(200).json({'accountsInformation' : result}); //Da bismo pristupili podacima, jednostavno pristupimo .accountsInformation ključu.
 		});	
 	});	
 	client.close();
